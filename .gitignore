@@ -1,3 +1,2 @@
 .bundle
-bower_components
-build
+.sass-cache
