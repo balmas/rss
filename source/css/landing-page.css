@@ -177,3 +177,14 @@ p.copyright {
 a {
     color: #3E8D9C;
 }
+
+.btn-primary {
+    background-color: #E49A0D;
+}
+
+
+.btn-primary:hover {
+    background-color: #E49A0D;
+      border-color: #5BC8DC;
+}
+
