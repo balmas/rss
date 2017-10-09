@@ -66,7 +66,7 @@
                     <hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Our Beginnings</h2>
-                    <p class="lead">The original Alpheios reading tools were <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/collections/the-alpheios-project/alpheios/">Firefox extensions</a> providing reading aids for any Latin, Greek, or Arabic text on the web. Browser technology has improved since Alpheios' first phase of development (2007-2010) and the existing tools are <a target="_blank" href="http://alpheios.net/content/letter-alpheios-users">now deprecated</a>. We are actively developing new versions of these tools which will work with all modern browsers and mobile devices. Resources for the prior versions of the tools, including videos and tutorials <a href target="_blank" href="#">remain available</a>.</p>
+                    <p class="lead">The original Alpheios reading tools were <a target="_blank" href="https://addons.mozilla.org/en-US/firefox/collections/the-alpheios-project/alpheios/">Firefox extensions</a> providing reading aids for any Latin, Greek, or Arabic text on the web. Browser technology has improved since Alpheios' first phase of development (2007-2010) and the existing tools are <a target="_blank" href="http://alpheios.net/content/letter-alpheios-users">now deprecated</a>. We are actively developing new versions of these tools which will work with all modern browsers and mobile devices. Resources for the prior versions of the tools, including videos and tutorials <a href="http://alpheios.net/content/alpheios-texts" target="_blank">remain available</a>.</p>
                     </p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
@@ -112,15 +112,7 @@
                     <div class="clearfix"></div>
                     <h2 class="section-heading">Participate</h2>
                     <p class="lead"><a href="#">Join our mailing list</a> to stay abreast of our developments and <a href="mailto:support@alpheios.net">email us</a> if you are interested in collaborating.</p>
-                    <p class="lead">
-                      <span>The Alpheios Project, Ltd. is a 501(c)(3) non-profit organization.  Contributions are tax-deductible.</span>
-                      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="6KBCJRJ3ZV6CL">
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"><a href="http://smile.amazon.com/ch/27-2248757" title="Amazon Smile">Or donate by shopping at Amazon Smile</a>
-                      </form>
-                    </p>
+                    <%= partial(:donate) =%>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/crowd.jpeg" alt="">
@@ -163,30 +155,7 @@
     </div>
     <!-- /.banner -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="http://alpheios.net/content/about-alpheios">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; The Alpheios Project, Ltd. 2017. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <%= partial(:footer) =%>
 
   <%= javascript_include_tag 'bootstrap' %>
 </body>

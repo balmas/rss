@@ -22,7 +22,7 @@ h6 {
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .topnav img {
@@ -173,9 +173,13 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
- 
+
 a {
     color: #3E8D9C;
+}
+
+a:hover {
+  color: #5BC8DC
 }
 
 .btn-primary {
@@ -187,4 +191,3 @@ a {
     background-color: #E49A0D;
       border-color: #5BC8DC;
 }
-
