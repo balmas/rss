@@ -191,3 +191,8 @@ a:hover {
     background-color: #E49A0D;
       border-color: #5BC8DC;
 }
+
+.alert-info {
+  background-color: #ffc;
+  border-color: #fc0;
+}
