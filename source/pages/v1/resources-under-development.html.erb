@@ -1,0 +1,60 @@
+<div class="content-section-a oldsite">
+
+  <!-- Header -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <script type="text/javascript">
+        function installBundle(a_xpis)
+        {
+            if (navigator.userAgent.indexOf("Firefox") == -1)
+            {
+              alert("Firefox is required to install these browser extensions.");
+                return;
+            }
+            var xpiObj = {};
+            for (var i=0; i<a_xpis.length; i++)
+            {
+          var xpi = a_xpis[i];
+                var name = "alpheios-" + xpi + "-latest";
+          xpiObj[name] = "/xpi-install/" + name + ".xpi";
+            }
+            InstallTrigger.install(xpiObj,function(){});
+        }
+        </script>
+        <h2>Resources Under Development</h2>
+        <ul class="lead">
+        <li><a href="http://alpheios.net/poetry">Poetry Prototype</a> (the voice of Stanley Lombardo)</li>
+        <li>Language Tools (click to install)<br />
+        <ul id="alpheios-install-links-static">
+        <li><a href="javascript:installBundle(['basic','chinese']);"><span class="alpheios-install-plus">+</span>Alpheios Chinese Tools</a></li>
+        </ul>
+        </li>
+        <li>Treebank Editor
+        <ul>
+        <li><a href="http://repos1.alpheios.net:/exist/rest/db/app/treebank-editsentence.xhtml?&amp;doc=1999.01.0021-editable&amp;s=1">Greek: Apollodorus (Perseus Ancient Greek Treebank Format)</a></li>
+        <li><a href="http://repos1.alpheios.net:/exist/rest/db/app/treebank-editsentence.xhtml?&amp;doc=1999.02.0066-editable&amp;s=1">Latin: Propertius (Perseus Latin Treebank Format)</a></li>
+        <li><a href="http://repos1.alpheios.net/exist/rest/db/app/treebank-editsentence.xhtml?&amp;doc=gilgamesh-odyssey&amp;s=1">Arabic: Time between Gilgamesh and Odyssey (CATiB)</a></li>
+        <li><a href="http://repos1.alpheios.net/exist/rest/db/app/treebank-editsentence.xhtml?&amp;doc=wulfila-gothicnt-editable&amp;s=1">Gothic: New Testament (PROIEL)</a></li>
+        <li><a href="http://repos1.alpheios.net/exist/rest/db/app/treebank-editsentence.xhtml?&amp;doc=usc-marianus-synth-editable&amp;s=2">Old Church Slavonic(PROIEL)</a></li>
+        </ul>
+        </li>
+        <li>Alignment Editor
+        <ul>
+        <li><a href="http://repos1.alpheios.net/exist/rest/db/app/align-editsentence.xhtml?&amp;doc=prop-1.1.align&amp;s=1">Propertius: Elegies Book 1 Poem 1</a></li>
+        <li><a href="http://repos1.alpheios.net/exist/rest/db/app/align-editsentence.xhtml?&amp;doc=aesop.gleason.align&amp;s=1">Babrius: Aesop's Fables</a></li>
+        <!--<li><a href="http://repos1.alpheios.net/exist/rest/db/app/ntlist.html">New Testament Aligned Greek and Latin</a></li>--><!--<li><a href="http://repos1.alpheios.net/exist/rest/db/app/ntlist.html">New Testament Aligned Greek and Latin</a></li>--><li><a href="http://repos1.alpheios.net/exist/rest/db/app/align-editsentence.xhtml?doc=poeticsgrc1en1_matta&amp;ed=false&amp;s=1">Aristotle's Poetics (Excerpt. Greek and English)</a></li>
+        </ul>
+        </li>
+        <li>Text Analysis
+        <ul>
+        <li><a href="http://alpheios.net/alpheios-demos/infl/html/iliad/noun_inflection.html">Inflection Analysis: Iliad Book 1</a> (without Treebank)</li>
+        <li><a href="http://alpheios.net/alpheios-demos/infl/html/odyssey/noun_inflection.html">Inflection Analysis: Odyssey Book 1</a> (with Treebank)</li>
+        <li><a href="http://services.perseus.tufts.edu/exist/rest/db/xq/alpheios-vocab-test.xq">Vocabulary Analysis</a></li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -201,3 +201,44 @@ a:hover {
   color: red;
   size: larger;
 }
+
+.alpheios-hint {
+    font-weight: normal;
+    color: #4E6476;
+    font-style: italic;
+    padding-left: 18px;
+    font-family:  Arial, sans-serif;
+    background: url(../img/v1/information-16-g.png) 0 0 no-repeat;
+}
+
+#alpheios-install-links {
+    display: none;
+}
+
+#alpheios-install-links li,
+#alpheios-install-links-static li {
+    list-style: none;
+    margin: 1em;
+}
+#alpheios-install-links li a:not(.alpheios-site-link),
+#alpheios-install-links-static li a:not(.alpheios-site-link){
+        background: #E49A0D;
+        color: white !important;
+        font-weight: bold !important;
+        font-size: 12pt;
+        cursor: pointer;
+        vertical-align: bottom;
+        padding: 4px;
+}
+
+#alpheios-install-links li a:not(.alpheios-site-link):hover,
+#alpheios-install-links-static li a:not(.alpheios-site-link):hover{
+      color: white !important;
+      text-decoration: none !important;
+      border: 1px solid #5BC8DC !important;
+}
+#alpheios-install-links span.alpheios-install-plus,
+#alpheios-install-links-static span.alpheios-install-plus {
+      color: #F6D918 !important;
+      font-size: 14pt;
+}
