@@ -242,3 +242,7 @@ a:hover {
       color: #F6D918 !important;
       font-size: 14pt;
 }
+.larger.bold {
+  font-size: larger;
+  font-weight: bold;
+}
