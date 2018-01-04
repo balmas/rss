@@ -246,3 +246,113 @@ a:hover {
   font-size: larger;
   font-weight: bold;
 }
+
+#alpheios-texts-block li.tochead {
+  list-style-image: url(arrow-rit-sharp.gif);
+  cursor: pointer;
+  color: #3E8D9C !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+}
+
+#alpheios-texts-block li.tochead.openmenu {
+  list-style-image: url(arrow-dn-sharp.gif);
+}
+
+#alpheios-texts-block ul {
+    padding-left: 1em;
+}
+
+#alpheios-texts-block li.tocitem {
+  list-style: none;
+  color: #666666;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+#alpheios-texts-block .hasdiagram {
+   background: url("/img/v1/diagram_16.png")no-repeat scroll 16px 50% transparent;
+   padding-left: 32px;
+}
+
+#alpheios-texts-block .hastrans {
+   background: url("/img/v1/translation_16.png")no-repeat scroll 16px 50% transparent;
+   padding-left: 32px;
+}
+
+#alpheios-texts-block .hastei {
+   background: url("/img/v1/TEI.png")no-repeat scroll 16px 50% transparent;
+   padding-left: 32px;
+}
+
+#alpheios-texts-block .hastrans.hasdiagram {
+   background: url("/img/v1/diagramplustrans.png")no-repeat scroll left top transparent;
+   padding-left: 32px;
+}
+
+#alpheios-texts-block li.tocitem a {
+    text-decoration: underline !important;
+}
+
+#alpheios-texts-block li.tocitem a.tocextra {
+    text-decoration: underline !important;
+    font-style: italic;
+    padding-left: 2em;
+    font-size: smaller;
+}
+
+#alpheios-texts-block li.tocitem-bulleted {
+  list-style: disc;
+  color: #666666;
+  font-weight: normal;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+
+#alpheios-texts-block li.tocitem-bulleted div {
+    font-size: smaller;
+    margin-left: 1em;
+}
+
+#alpheios-texts-block .textreqs {
+    color: #666666;
+    margin: 0 2em 0 2em;
+    font-weight: normal;
+    font-size: smaller;
+    border: 1px dotted #666666;
+    padding-left: 1.25em;
+}
+
+#alpheios-texts-block .textreqs p {
+    margin: 0 0 0 0;
+    line-height: 1.5em;
+    text-indent: -1em;
+}
+#alpheios-texts-block .textreqs p.header {
+    font-weight: bold;
+}
+
+#alpheios-texts-block a {
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
+.panel-default > .panel-heading {
+  background-color: #436476;
+  color: white;
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: white;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+.panel-heading .accordion-toggle:hover:after {
+    color: #5BC8DC !important;
+}
