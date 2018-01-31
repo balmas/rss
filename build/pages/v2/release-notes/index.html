@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>The Alpheios Project</title>
+  <link href="/css/bootstrap.css" rel="stylesheet" />
+  <link href="/css/landing-page.css" rel="stylesheet" />
+  <link href="/img/alpheios_16.ico" rel="icon" type="image/ico" />
+
+  <!-- Custom CSS -->
+  <link href="css/landing-page.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+<body>
+   <!-- Navigation -->
+ <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+   <div class="container topnav">
+     <!-- Brand and toggle get grouped for better mobile display -->
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand topnav" href="/"><img class="img-responsive" src="/img/logo.png" alt="Alpheios Logo"/></a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/pages/tools">Our Tools</a>
+        </li>
+        <li>
+          <a href="/pages/texts">Example Texts</a>
+        </li>
+        <li>
+          <a id="original_site" href="http://archive.alpheios.net">Original Site</a>
+        </li>
+        <li>
+          <a href="/pages/engagement">Engagement</a>
+        </li>
+        <li>
+          <a href="/pages/governance">Governance</a>
+        </li>
+        <li>
+          <a href="/pages/about">About</a>
+        </li>
+        <li>
+          <a href="/pages/signup">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+
+  <div class="intro-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <h1>Release Notes</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-section-a">
+  <!-- Header -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <h2>Alpheios Version 2 Alpha Release, January 2018</h2>
+        <p class="lead">
+          This release of the Alpheios Reading Tools for Chrome and Firefox is an <b>alpha</b> version, released with these goals in mind:</p>
+          <ul class="lead">
+            <li>To provide a replacement for the original Firefox extensions.</li>
+            <li>To request user feedback on the design and functionality of the new version while we are still in early stages of development.</li>
+          </ul>
+        <p class="lead">
+          We encourage you to install and test the tools and offer feedback on what works, what doesn't and what you would
+          like to see added or improved. Below are lists of the <a href="#features">basic functionality</a> which should be working now,
+          <a href="#issues">known issues</a>, and our dreams for <a href="#roadmap">future releases</a>
+        </p>
+        <p class="lead">
+          See our instructions for <a href="/pages/v2/tutorials">Getting Started</a>. Please send all feedback to <a href="mailto:support@alpheios.net">support@alpheios.net</a>.
+        </p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <a name="features"></a>
+        <h3>Stable Features</h3>
+        <p class="lead">
+          <b>General (all languages)</b>
+          <ul class="lead">
+            <li>Alpheios functionality can be activated for any browser page and remains active until disabled.</li>
+            <li>Once activated, double-clicking on a word provides access to Alpheios resources.</li>
+          </ul>
+        </p>
+        <p class="lead">
+          <b>Latin</b>
+          <ul class="lead">
+            <li>Morphological analysis (Whitaker's Words)</li>
+            <li>Short definitions (Whitaker's Words)</li>
+            <li>Full definitions (Lewis and Short)</li>
+            <li>Linked and browsable grammar (Bennett)</li>
+            <li>Linked inflection tables</li>
+          </ul>
+        </p>
+        <p class="lead">
+          <b>Greek</b>
+          <ul class="lead">
+            <li>Morphological analysis (Morpheus analyzer)</li>
+            <li>Short definitions (available sources: LSJ, Middle Liddell, Autenreith, Dodson, Abbott)</li>
+            <li>Full definitions (available sources: LSJ, Middle Liddell, Autenreith, Dodson, Abbott)</li>
+            <li>Linked and browsable grammar (Smyth)</li>
+          </ul>
+        </p>
+        <p class="lead">
+          <b>Classical Arabic</b>
+          <ul class="lead">
+            <li>Morphological analysis (Buckwalter analyzer)</li>
+            <li>Short definitions (Lane and Salmone)</li>
+            <li>Full definitions (Lane and Salmone)</li>
+          </ul>
+        </p>
+        <h3><em>Experimental</em> Features</h3>
+        <p class="lead">
+          <b>Classical Persian</b>
+          <ul class="lead">
+            <li>Definitions (Steingass)</li>
+            <li>Part of speech analysis (Hazm)</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <a name="issues"></a>
+        <h3>Known Issues and Requests for Feedback</h3>
+        <p class="lead">
+          <ul class="lead">
+            <li>We are actively seeking input on the best new user interface design for Alpheios. The current design is provisional
+              and we expect to be changing it significantly in coming releases.  We need feedback from users to know what would work best.</li>
+            <li>The Latin inflection tables are missing irregular verbs and the ability to browse the tables independent from word lookups.</li>
+            <li>The Greek and Latin grammar displays need better navigation support and an updated design.</li>
+            <li>Automatic identification of the language of a page only works if the language has been explicitly identified in the markup. This should be improved upon.</li>
+            <li>The Persian functionality is only experimental. We need a new morphological analyzer in order to provide more complete and quicker results.</li>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <a name="roadmap"></a>
+        <h3>Features targeted for the Beta Release</h3>
+        <p class="lead">
+          <ul class="lead">
+            <li>Addressing known issues</li>
+            <li>Updated user interface design</li>
+            <li>Greek inflection tables</li>
+            <li>Inflection table browse functionality</li>
+            <li>Support for treebanks and aligned translations</li>
+            <li>User accounts and individual word lists</li>
+            <li>Release of the Alpheios component libraries for reuse</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <h3>Longer term Roadmap</h3>
+        <p class="lead">
+          We have big dreams for Alpheios. We list just some of those here. Eventually we hope to support many additional features (such as commentary and annotation).
+          And to add more languages, such as Hebrew, Syriac and Coptic. We want to offer more resources (lexicons, grammars, treebanks, translations, etc.) for the existing languages, and to allow users to supply and share their own resources for specific languages and texts. We want to link to the
+          amazing array of already existing-community provided tools and services for these lanaguages, and to allow users the ability to customize the
+          interface and resources for language learning according to their own needs and preferences. We will provide mobile applications and
+          learning games to accompany the browser extensions. We will also explore the addition of audio and visual aids to accompany the texts.
+        </p>
+  </div>
+</div>
+
+
+  <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/pages/tools">Our Tools</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/pages/texts">Example Texts</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/pages/engagement">Engagement</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="http://archive.alpheios.net">Original Site</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/pages/governance">Governance</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/pages/about">About</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                    <li>
+                        <a href="/pages/signup">Signup</a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted small">Copyright &copy; The Alpheios Project, Ltd. 2017. All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-8210342-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script src="/js/bootstrap.js"></script>
+</body>
+</html>
