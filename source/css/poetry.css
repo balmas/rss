@@ -1,0 +1,11 @@
+
+.poetry.text {
+  font-family:  'Palatino', 'Palatino Linotype', 'Georgia', 'Serif';
+  font-size: 18pt;
+  color: #666666;
+  padding-right: 1rem;
+}
+
+.poetry.text.active {
+  background: #5BC8DC;
+}
