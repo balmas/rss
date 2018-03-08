@@ -34,6 +34,7 @@ function watchCues() {
   for (let c of this.track.activeCues) {
     document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('active'))
     document.getElementById(`track-${this.track.id}-cue-${c.id}`).classList.add('active')
+    $(`#${this.parentElement.id}-carousel`).carousel(parseInt(c.id)-1)
   }
 }
 function setupAudio() {
@@ -42,6 +43,7 @@ function setupAudio() {
     a.addEventListener('timeupdate',pauseAudio, false)
     a.addEventListener('ended',endSegment,false)
     a.addEventListener('pause',endSegment,false)
+    $(`#${a.id}-carousel`).carousel({interval: false})
   })
   document.querySelectorAll('track').forEach((t) => {
     t.addEventListener("load", loadCues, false)
