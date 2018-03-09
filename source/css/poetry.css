@@ -19,6 +19,7 @@
 }
 
 .poetry.transcript {
+  display:flex;
   flex-wrap: wrap;
 }
 

@@ -102,9 +102,13 @@ function setupAudio() {
   })
   $('.carousel-caption').on('mouseover', playSlide)
   $('.poetry.control.step').on('click', playNext)
+  $('.poetry.control.step').on('touchstart', playNext)
   $('.poetry.control.play').on('click', playToCurrent)
+  $('.poetry.control.play').on('touchstart', playToCurrent)
   $('.poetry.control.restart').on('click', restartAudio)
+  $('.poetry.control.restart').on('touchstart', restartAudio)
   $('.poetry.control.images').on('click', toggleImages)
+  $('.poetry.control.images').on('touchstart', toggleImages)
 }
 
 function toggleImages() {
