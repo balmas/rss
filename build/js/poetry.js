@@ -2,8 +2,6 @@ let currentAudioEnd = {}
 let currentCue = {}
 function endSegment() {
   currentAudioEnd[this.id] = this.duration
-  document.querySelectorAll('.poetry.control.play').forEach((e) => {e.classList.add('disabled')})
-  //document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('active'))
 }
 
 function playCue(audio,cue,withImage) {
@@ -32,12 +30,10 @@ function restartAudio() {
 function playToCurrent() {
   let tElem = document.getElementById(this.dataset.track)
   let audio = tElem.parentElement
-  if (currentAudioEnd[audio.id] < audio.duration) {
-    let cue = document.getElementById(`track-${tElem.id}-cue-${1}`)
-    audio.currentTime = cue.dataset.start
-    audio.play()
-    $(`#${audio.id}-carousel`).carousel(parseInt(cue.dataset.image))
-  }
+  let cue = document.getElementById(`track-${tElem.id}-cue-${1}`)
+  audio.currentTime = cue.dataset.start
+  audio.play()
+  $(`#${audio.id}-carousel`).carousel(parseInt(cue.dataset.image))
 }
 
 function playNext() {
