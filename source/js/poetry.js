@@ -3,14 +3,25 @@ function endSegment() {
   currentAudioEnd[this.id] = this.duration
   document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('active'))
 }
-function playSegment() {
+
+function playSegment(audio,start,end) {
+  audio.currentTime = start
+  currentAudioEnd[audio.id] = end
+  audio.play()
+}
+
+function playText() {
   let tElem = document.getElementById(this.dataset.track)
   let audio = tElem.parentElement
-  audio.currentTime = this.dataset.start
-  currentAudioEnd[audio.id] = this.dataset.end
-  audio.play()
-  console.log("Move carousel to " + this.dataset.image)
+  playSegment(audio,this.dataset.start,this.dataset.end)
   $(`#${audio.id}-carousel`).carousel(parseInt(this.dataset.image))
+}
+
+function playSlide() {
+  let cue = document.getElementById(this.parentElement.dataset.cue)
+  let track = cue.dataset.track
+  let audio = document.getElementById(track).parentElement
+  playSegment(audio,cue.dataset.start,cue.dataset.end)
 }
 
 function loadCues() {
@@ -27,7 +38,7 @@ function loadCues() {
       text.setAttribute('data-image',cue.id-1)
       text.innerHTML = cue.text
       document.getElementById("current-transcript").appendChild(text)
-      text.addEventListener("click", playSegment, false)
+      text.addEventListener("mouseover", playText, false)
     }
 }
 function watchCues() {
@@ -49,6 +60,7 @@ function setupAudio() {
     t.addEventListener("load", loadCues, false)
     t.addEventListener("cuechange", watchCues, false)
   })
+  $(`.carousel-caption`).on('mouseover', playSlide)
 }
 
 function pauseAudio() {

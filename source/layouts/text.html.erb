@@ -5,6 +5,8 @@
   <title>The Alpheios Project</title>
   <%= stylesheet_link_tag 'bootstrap' %>
   <%= stylesheet_link_tag 'landing-page' %>
+  <%= stylesheet_link_tag 'poetry' %>
+  <%= stylesheet_link_tag 'style' %>
   <%= favicon_tag '/img/alpheios_16.ico' %>
 
   <!-- Custom CSS -->
@@ -30,5 +32,12 @@
   <%= partial(:footer) %>
 
   <%= javascript_include_tag 'bootstrap' %>
+  <%= javascript_include_tag 'poetry' %>
+  <%= javascript_include_tag 'alpheios-embedded' %>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(event) {
+      new Alpheios.Embedded("#alpheios-main",document,{top:"40vh",left:"10vw"}).activate();
+    });
+  </script>
 </body>
 </html>

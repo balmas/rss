@@ -11,7 +11,7 @@
   <!-- Header -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 col-sm-6">
+      <div class="col-lg-5 col-sm-6" xml:lang="grc">
         <audio id="lombardo-iliad-1" controls>
           <source src="/media/take3mp3b_001.mp3" type="audio/mp3">
           <track id="lombardo-iliad-1-grc" label="Greek Recitation" kind="subtitles" src="/media/01.vtt" srclang="grc" default>
@@ -21,28 +21,26 @@
       </div>
       <div class="col-lg-5 col-lg-offset-2 col-sm-6">
         <div id="lombardo-iliad-1-carousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#lombardo-iliad-1-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#lombardo-iliad-1-carousel" data-slide-to="1"></li>
-            <li data-target="#lombardo-iliad-1-carousel" data-slide-to="2"></li>
-            <li data-target="#lombardo-iliad-1-carousel" data-slide-to="3"></li>
-            <li data-target="#lombardo-iliad-1-carousel" data-slide-to="4"></li>
-          </ol>
           <div class="carousel-inner">
-            <div class="item active">
+            <div class="item active" data-cue="track-lombardo-iliad-1-grc-cue-1">
               <img class="img-responsive" src="/img/poetry/u1.jpg" alt="">
+              <div class="carousel-caption">μῆνιν</div>
             </div>
-            <div class="item">
+            <div class="item" data-cue="track-lombardo-iliad-1-grc-cue-2">
               <img class="img-responsive" src="/img/poetry/u2.jpg" alt="">
+              <div class="carousel-caption">ἄειδε</div>
             </div>
-            <div class="item">
+            <div class="item" data-cue="track-lombardo-iliad-1-grc-cue-3">
               <img class="img-responsive" src="/img/poetry/u3.jpg" alt="">
+              <div class="carousel-caption">θεὰ</div>
             </div>
-            <div class="item">
+            <div class="item" data-cue="track-lombardo-iliad-1-grc-cue-4">
               <img class="img-responsive" src="/img/poetry/u4.jpg" alt="">
+              <div class="carousel-caption">Πηληϊάδεω</div>
             </div>
-            <div class="item">
+            <div class="item" data-cue="track-lombardo-iliad-1-grc-cue-5">
               <img class="img-responsive" src="/img/poetry/u5.jpg" alt="">
+              <div class="carousel-caption">Ἀχιλῆος</div>
             </div>
           </div>
           <a class="left carousel-control" href="#lombardo-iliad-1-carousel" role="button" data-slide="prev">
@@ -56,3 +54,6 @@
     </div>
   </div>
 </div>
+<div id="alpheios-main"
+  data-trigger="dblclick,touchstart"
+  data-selector=".poetry.text"></div>

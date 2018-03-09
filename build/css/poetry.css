@@ -4,8 +4,29 @@
   font-size: 18pt;
   color: #666666;
   padding-right: 1rem;
+  cursor: pointer;
 }
 
 .poetry.text.active {
-  background: #5BC8DC;
+  background: #F6D918;
+  transition: all 1s ease-out;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: #E4980D;
+}
+
+.carousel-control.right:hover, .carousel-control.left:hover {
+  color: #F6D918;
+}
+
+.carousel-caption {
+  color: #E4980D;
+  text-shadow: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+.carousel-caption:hover {
+  color: #F6D918;
 }
