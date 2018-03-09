@@ -36,7 +36,8 @@
   <%= javascript_include_tag 'alpheios-embedded' %>
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(event) {
-      new Alpheios.Embedded("#alpheios-main",document,{top:"40vh",left:"10vw"}).activate();
+      new Alpheios.Embedded("#alpheios-main",document,{top:"30vh",left:"50vw"}).activate();
+      setupAudio()
     });
   </script>
 </body>

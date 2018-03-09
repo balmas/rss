@@ -1,15 +1,48 @@
+#current-controls {
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}
+.poetry.control {
+  color: #3E8D9C;
+  font-size: 32pt;
+}
+
+.poetry.control.disabled, .poetry.control.disabled:hover {
+  color: #D1D1D0;
+  cursor: not-allowed;
+}
+
+.poetry.control:hover {
+  color: #5BC8DC;
+}
+
+.poetry.transcript {
+  flex-wrap: wrap;
+}
 
 .poetry.text {
   font-family:  'Palatino', 'Palatino Linotype', 'Georgia', 'Serif';
-  font-size: 18pt;
+  font-size: 48pt;
   color: #666666;
   padding-right: 1rem;
   cursor: pointer;
+  display: none;
+}
+
+.poetry.text.played {
+  display: inline;
 }
 
 .poetry.text.active {
   background: #F6D918;
   transition: all 1s ease-out;
+}
+
+.carousel-start-item {
+  height: 300px;
+  width: 300px;
 }
 
 .carousel-control.right, .carousel-control.left {
@@ -29,4 +62,8 @@
 }
 .carousel-caption:hover {
   color: #F6D918;
+}
+
+.carousel.disabled {
+  visibility:hidden;
 }
