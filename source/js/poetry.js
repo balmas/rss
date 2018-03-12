@@ -1,5 +1,7 @@
 let currentAudioEnd = {}
 let currentCue = {}
+let timers = []
+let showAll = false
 function endSegment() {
   currentAudioEnd[this.id] = this.duration
 }
@@ -9,6 +11,8 @@ function playCue(audio,cue,withImage) {
   currentAudioEnd[audio.id] = cue.dataset.end
   currentCue[audio.id] = parseInt(cue.dataset.cue)
   audio.play()
+  cue.classList.add('played')
+  document.querySelectorAll('.poetry.control.step').forEach((e) => {e.classList.remove('disabled')})
   document.querySelectorAll('.poetry.control.play').forEach((e) => {e.classList.remove('disabled')})
   document.querySelectorAll('.poetry.control.repeat').forEach((e) => {e.classList.remove('disabled')})
   document.querySelectorAll('.poetry.control.restart').forEach((e) => {e.classList.remove('disabled')})
@@ -19,21 +23,26 @@ function playCue(audio,cue,withImage) {
 
 function restartAudio() {
   this.classList.add('disabled')
+  document.querySelectorAll('.poetry.control.step').forEach((e) => {e.classList.remove('disabled')})
   document.querySelectorAll('.poetry.control.play').forEach((e) => {e.classList.add('disabled')})
   document.querySelectorAll('.poetry.control.repeat').forEach((e) => {e.classList.add('disabled')})
   let tElem = document.getElementById(this.dataset.track)
   let audio = tElem.parentElement
   currentCue[audio.id] = 0
+  showAll = false
   document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('active'))
   document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('played'))
   $(`#${audio.id}-carousel`).carousel(0)
 }
 
 function playToCurrent() {
+  document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('played'))
+  document.querySelectorAll('.poetry.text').forEach((e) => e.classList.add('small'))
   let tElem = document.getElementById(this.dataset.track)
   let audio = tElem.parentElement
   let cue = document.getElementById(`track-${tElem.id}-cue-${1}`)
   audio.currentTime = cue.dataset.start
+  showAll = true
   audio.play()
   $(`#${audio.id}-carousel`).carousel(parseInt(cue.dataset.image))
 }
@@ -43,6 +52,7 @@ function replayCurrent() {
   let audio = tElem.parentElement
   let lastCue = currentCue[audio.id] || 0
   let cue = document.getElementById(`track-${tElem.id}-cue-${lastCue}`)
+  showAll = false
   playCue(audio,cue,true)
 }
 
@@ -52,12 +62,20 @@ function playNext() {
   let lastCue = currentCue[audio.id] || 0
   let nextCue = lastCue + 1
   let cue = document.getElementById(`track-${tElem.id}-cue-${nextCue}`)
-  playCue(audio,cue,true)
+  if (cue) {
+    document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('played'))
+    document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('small'))
+    showAll = false
+    playCue(audio,cue,true)
+  } else {
+    this.classList.add('disabled')
+  }
 }
 
 function playText() {
   let tElem = document.getElementById(this.dataset.track)
   let audio = tElem.parentElement
+  showAll = false
   playCue(audio,this,true)
 }
 
@@ -65,6 +83,7 @@ function playSlide() {
   let cue = document.getElementById(this.parentElement.dataset.cue)
   let track = cue.dataset.track
   let audio = document.getElementById(track).parentElement
+  showAll = false
   playCue(audio,cue,false)
 }
 
@@ -86,14 +105,18 @@ function loadCues() {
       text.addEventListener("mouseover", playText, false)
     }
 }
+
 function watchCues() {
-  for (let c of this.track.activeCues) {
-    //document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('active'))
-    //document.getElementById(`track-${this.track.id}-cue-${c.id}`).classList.add('active')
-    document.getElementById(`track-${this.track.id}-cue-${c.id}`).classList.add('played')
-    $(`#${this.parentElement.id}-carousel`).carousel(parseInt(c.id))
+  if (playToCurrent) {
+    for (let c of this.track.activeCues) {
+      //document.querySelectorAll('.poetry.text').forEach((e) => e.classList.remove('active'))
+      //document.getElementById(`track-${this.track.id}-cue-${c.id}`).classList.add('active')
+      document.getElementById(`track-${this.track.id}-cue-${c.id}`).classList.add('played')
+      $(`#${this.parentElement.id}-carousel`).carousel(parseInt(c.id))
+    }
   }
 }
+
 function setupAudio() {
   document.querySelectorAll('track').forEach((t) => {
     if (t.readyState === 2) {
@@ -104,6 +127,9 @@ function setupAudio() {
   })
   document.querySelectorAll('audio').forEach((a) => {
     currentAudioEnd[a.id] = a.duration
+    // timeupdate isn't consistent or granular enough so we set our own
+    // interval timer whenever we start to play
+    a.addEventListener('play',checkAudio,false)
     a.addEventListener('timeupdate',pauseAudio, false)
     a.addEventListener('ended',endSegment,false)
     a.load()
@@ -127,8 +153,19 @@ function toggleImages() {
 
 }
 
+function checkAudio() {
+  let audio = this
+  timers.push(setInterval(function(){
+    pauseAudio.bind(audio)()
+  },2))
+}
+
 function pauseAudio() {
   if (this.currentTime >= currentAudioEnd[this.id]) {
     this.pause()
+    // make sure we clear out all intervals in case multiple were started
+    while (timers.length> 0) {
+      clearInterval(timers.pop())
+    }
   }
 }

@@ -22,15 +22,19 @@
 .poetry.transcript {
   display:flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .poetry.text {
   font-family:  'Palatino', 'Palatino Linotype', 'Georgia', 'Serif';
-  font-size: 48pt;
+  font-size: 64pt;
   color: #666666;
   padding-right: 1rem;
   cursor: pointer;
   display: none;
+}
+.poetry.text.small {
+  font-size: 48pt;
 }
 
 .poetry.text.played {
