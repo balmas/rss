@@ -37,8 +37,8 @@
   display: inline;
 }
 
-.poetry.text.active {
-  background: #F6D918;
+.poetry.text.active, .poetry.text:hover {
+  background: #5BC8DC;
   transition: all 1s ease-out;
 }
 
