@@ -161,7 +161,9 @@ function checkAudio() {
 }
 
 function pauseAudio() {
-  if (this.currentTime >= currentAudioEnd[this.id]) {
+  console.log(this.currentTime)
+  console.log(currentAudioEnd)
+  if (this.currentTime > currentAudioEnd[this.id]) {
     this.pause()
     // make sure we clear out all intervals in case multiple were started
     while (timers.length> 0) {
