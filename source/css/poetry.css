@@ -5,8 +5,9 @@
   justify-content: center;
 }
 .poetry.control {
-  color: #3E8D9C;
+  color: #333333;
   font-size: 32pt;
+  padding: 10px;
 }
 
 .poetry.control.disabled, .poetry.control.disabled:hover {

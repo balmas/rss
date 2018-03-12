@@ -10,6 +10,7 @@ function playCue(audio,cue,withImage) {
   currentCue[audio.id] = parseInt(cue.dataset.cue)
   audio.play()
   document.querySelectorAll('.poetry.control.play').forEach((e) => {e.classList.remove('disabled')})
+  document.querySelectorAll('.poetry.control.repeat').forEach((e) => {e.classList.remove('disabled')})
   document.querySelectorAll('.poetry.control.restart').forEach((e) => {e.classList.remove('disabled')})
   if (withImage) {
     $(`#${audio.id}-carousel`).carousel(parseInt(cue.dataset.image))
@@ -19,6 +20,7 @@ function playCue(audio,cue,withImage) {
 function restartAudio() {
   this.classList.add('disabled')
   document.querySelectorAll('.poetry.control.play').forEach((e) => {e.classList.add('disabled')})
+  document.querySelectorAll('.poetry.control.repeat').forEach((e) => {e.classList.add('disabled')})
   let tElem = document.getElementById(this.dataset.track)
   let audio = tElem.parentElement
   currentCue[audio.id] = 0
@@ -34,6 +36,14 @@ function playToCurrent() {
   audio.currentTime = cue.dataset.start
   audio.play()
   $(`#${audio.id}-carousel`).carousel(parseInt(cue.dataset.image))
+}
+
+function replayCurrent() {
+  let tElem = document.getElementById(this.dataset.track)
+  let audio = tElem.parentElement
+  let lastCue = currentCue[audio.id] || 0
+  let cue = document.getElementById(`track-${tElem.id}-cue-${lastCue}`)
+  playCue(audio,cue,true)
 }
 
 function playNext() {
@@ -101,13 +111,15 @@ function setupAudio() {
   })
   $('.carousel-caption').on('mouseover', playSlide)
   $('.poetry.control.step').on('click', playNext)
-  $('.poetry.control.step').on('touchstart', playNext)
+  $('.poetry.control.step').on('touchend', playNext)
   $('.poetry.control.play').on('click', playToCurrent)
-  $('.poetry.control.play').on('touchstart', playToCurrent)
+  $('.poetry.control.play').on('touchend', playToCurrent)
   $('.poetry.control.restart').on('click', restartAudio)
-  $('.poetry.control.restart').on('touchstart', restartAudio)
+  $('.poetry.control.restart').on('touchend', restartAudio)
+  $('.poetry.control.repeat').on('click', replayCurrent)
+  $('.poetry.control.repeat').on('touchend', replayCurrent)
   $('.poetry.control.images').on('click', toggleImages)
-  $('.poetry.control.images').on('touchstart', toggleImages)
+  $('.poetry.control.images').on('touchend', toggleImages)
 }
 
 function toggleImages() {
