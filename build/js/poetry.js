@@ -96,7 +96,6 @@ function setupAudio() {
     currentAudioEnd[a.id] = a.duration
     a.addEventListener('timeupdate',pauseAudio, false)
     a.addEventListener('ended',endSegment,false)
-    a.addEventListener('loadeddata',false)
     a.load()
     $(`#${a.id}-carousel`).carousel({interval: false})
   })
