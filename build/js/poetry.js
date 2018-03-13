@@ -144,13 +144,30 @@ function setupAudio() {
   $('.poetry.control.restart').on('touchend', restartAudio)
   $('.poetry.control.repeat').on('click', replayCurrent)
   $('.poetry.control.repeat').on('touchend', replayCurrent)
-  $('.poetry.control.images').on('click', toggleImages)
-  $('.poetry.control.images').on('touchend', toggleImages)
+  $('.poetry.control.settings').on('click', toggleSettings)
+  $('.poetry.control.settings').on('touchend', toggleSettings)
+  $('#toggleImages').on('click',toggleImages)
+  $('#toggleImages').on('touchend',toggleImages)
+  $('#togglePlayer').on('click',togglePlayer)
+  $('#togglePlayer').on('touchend',togglePlayer)
+}
+
+function toggleSettings() {
+  document.querySelector('.poetry.settings-form').classList.toggle('visible')
 }
 
 function toggleImages() {
   document.querySelector('.carousel').classList.toggle('disabled')
+}
 
+function togglePlayer() {
+  document.querySelectorAll('audio').forEach((a) => {
+    if (a.getAttribute('controls') || a.getAttribute('controls') === "") {
+      a.removeAttribute('controls')
+    } else {
+      a.setAttribute('controls',true)
+    }
+  })
 }
 
 function checkAudio() {

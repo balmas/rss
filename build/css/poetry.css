@@ -4,10 +4,39 @@
   align-items: flex-end;
   justify-content: center;
 }
+
+#page-controls {
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.poetry.settings-form {
+  display:flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  visibility: hidden;
+}
+
+.poetry.settings-form.visible {
+  visibility: visible;
+  transition: all 1s ease-out;
+}
+
 .poetry.control {
-  color: #333333;
+  color: #4E6476;
   font-size: 32pt;
   padding: 10px;
+}
+
+#page-controls .poetry.control {
+  font-size: 18pt;
+}
+
+.poetry.control:hover {
+  color: #5BC8DC;
 }
 
 .poetry.control.disabled, .poetry.control.disabled:hover {
@@ -15,20 +44,17 @@
   cursor: not-allowed;
 }
 
-.poetry.control:hover {
-  color: #5BC8DC;
-}
-
 .poetry.transcript {
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
+  min-height: 150px;
 }
 
 .poetry.text {
+  color: #333333;
   font-family:  'Palatino', 'Palatino Linotype', 'Georgia', 'Serif';
   font-size: 64pt;
-  color: #666666;
   padding-right: 1rem;
   cursor: pointer;
   display: none;
@@ -41,7 +67,11 @@
   display: inline;
 }
 
-.poetry.text.active, .poetry.text:hover {
+.poetry.text:hover {
+  color: #5BC8DC;
+}
+
+.poetry.text.active {
   background: #5BC8DC;
   transition: all 1s ease-out;
 }

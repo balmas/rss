@@ -70,11 +70,27 @@
 </nav>
 
 
-  <div class="intro-header">
+  <div class="content-section-a">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 col-sm-12">
-        <h1>Poetry</h1>
+        <div id="page-controls">
+          <span class="poetry control settings" role="button" data-track="lombardo-iliad-1-grc" title="Page Settings">
+            <span class="glyphicon glyphicon-cog"></span>
+          </span>
+        </div>
+        <div class="poetry settings-form">
+          <div class="poetry settings-wrapper">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="toggleImages">
+              <label class="form-check-label" for="toggleImages">Images</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="togglePlayer">
+              <label class="form-check-label" for="togglePlayer">Audio Controls</label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -88,11 +104,6 @@
         </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="content-section-a">
-  <!-- Header -->
-  <div class="container">
     <div class="row">
         <div id="current-controls">
           <span class="poetry control step" role="button" data-track="lombardo-iliad-1-grc" title="Next Word">
@@ -107,9 +118,14 @@
           <span class="poetry control restart disabled" role="button" data-track="lombardo-iliad-1-grc" title="Clear and Restart">
             <span class="glyphicon glyphicon-refresh"></span>
           </span>
-          <span class="poetry control images" role="button" data-track="lombardo-iliad-1-grc" title="Show Images">
-            <span class="glyphicon glyphicon-picture"></span>
-          </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-sm-12">
+        <audio id="lombardo-iliad-1" preload="false">
+          <source src="/media/iliad_1.mp3" type="audio/mp3">
+          <track id="lombardo-iliad-1-grc" label="Greek Recitation" kind="subtitles" src="/media/01.vtt" srclang="grc" default>
+        </audio>
       </div>
     </div>
   </div>
@@ -156,19 +172,6 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="content-section-a">
-  <!-- Header -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 col-sm-12">
-        <audio id="lombardo-iliad-1" controls preload="false">
-          <source src="/media/iliad_1.mp3" type="audio/mp3">
-          <track id="lombardo-iliad-1-grc" label="Greek Recitation" kind="subtitles" src="/media/01.vtt" srclang="grc" default>
-        </audio>
       </div>
     </div>
   </div>
