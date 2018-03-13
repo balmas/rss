@@ -25,6 +25,10 @@
   transition: all 1s ease-out;
 }
 
+.poetry .form-check:hover {
+  color: #5BC8DC;
+}
+
 .poetry.control {
   color: #4E6476;
   font-size: 32pt;
