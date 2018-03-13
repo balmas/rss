@@ -4,7 +4,7 @@ set :fonts_dir, 'fonts'
 activate :bh
 activate :sprockets
 activate :directory_indexes
-page "/pages/prototypes/*", :layout => "text"
+page "/pages/poetry/*", :layout => "text"
 page "/pages/*", :layout => "content"
 sprockets.append_path 'bower_components/bootstrap-sass/assets/fonts'
 sprockets.append_path 'bower_components'
