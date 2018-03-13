@@ -107,3 +107,14 @@
 .carousel.disabled {
   visibility:hidden;
 }
+
+.tooltip-inner {
+    background-color: #7E8897;
+    color: white;
+}
+.tooltip.top .tooltip-arrow {
+    border-top-color: #7E8897;
+}
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #7E8897;
+}
