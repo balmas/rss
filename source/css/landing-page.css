@@ -337,6 +337,11 @@ a:hover {
   color: white;
 }
 
+.panel-default > .panel-heading.panel-group-reverse {
+  color: #436476;
+  background-color: white;
+}
+
 .panel-heading .accordion-toggle:after {
     /* symbol for "opening" panels */
     font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
@@ -344,6 +349,10 @@ a:hover {
     float: right;        /* adjust as needed */
     color: white;         /* adjust as needed */
 }
+.panel-heading.panel-group-reverse .accordion-toggle:after {
+  color: #436476;
+}
+
 .panel-heading .accordion-toggle.collapsed:after {
     /* symbol for "collapsed" panels */
     content: "\e080";    /* adjust as needed, taken from bootstrap.css */
