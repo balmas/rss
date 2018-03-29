@@ -1,3 +1,9 @@
+#text-identifier {
+  font-family:  'Palatino', 'Palatino Linotype', 'Georgia', 'Serif';
+  font-size: 14pt;
+  color: #4E6476;
+}
+
 #current-controls {
   display:flex;
   flex-direction: row;
