@@ -1,6 +1,10 @@
+.content-section-a.nopadding {
+  padding: 0px
+}
+
 #text-identifier {
   font-family:  'Palatino', 'Palatino Linotype', 'Georgia', 'Serif';
-  font-size: 14pt;
+  font-size: 20pt;
   color: #4E6476;
 }
 
@@ -64,7 +68,7 @@
 .poetry.text {
   color: #333333;
   font-family:  'Palatino', 'Palatino Linotype', 'Georgia', 'Serif';
-  font-size: 96pt;
+  font-size: 72pt;
   padding-right: 1rem;
   cursor: pointer;
   display: none;
