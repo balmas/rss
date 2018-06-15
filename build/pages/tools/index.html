@@ -91,18 +91,16 @@
             inflection tables and grammars for any Latin or Ancient Greek word. A subset of these resources are available for
             Classical Arabic and Persian. Personal vocabulary lists, inflection tables for Greek, sentence diagrams, word-aligned
             translations and additional resources will be added in coming releases.
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-info">Install</button>
-                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Install</span>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="https://chrome.google.com/webstore/detail/alpheios-reading-tools/apkmkeppocbbebomnhdmhfenfifkhjfd">Chrome</a></li>
-                            <li><a href="https://addons.mozilla.org/en-US/firefox/addon/alpheios-reading-tools/">Firefox</a></li>
-                          </ul>
-                      </div>
         </p>
+        <p><a href="#" role="button" class="btn btn-info hidden" id="install-button">Install</a></p>
+<div id="install-info-unsupported" class="hidden">
+  <p>To try the tools with any text, please use a supported browser.</p>
+  <p><a href="https://www.google.com/chrome/">Download Chrome</a></p>
+  <p><a href="https://www.mozilla.org/ru/firefox/new/">Download Firefox</a></li></p>
+</div>
+<div id="install-info-unsupported-mobile" class="hidden">
+  <p>A mobile solution is currently under development. Please try the tools on the desktop.</p>
+</div>
         <h3>Prototypes</h3>
         <p class="lead">
             <a href="/pages/prototypes">Additional Prototypes and Resources Under Development.</a>
@@ -186,7 +184,7 @@
     </div>
   </div>
 </div>
-
+<script src="/js/browserDetect-40c7a11e.js"></script>
 
   <!-- Footer -->
 <footer>

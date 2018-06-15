@@ -21,18 +21,8 @@
             inflection tables and grammars for any Latin or Ancient Greek word. A subset of these resources are available for
             Classical Arabic and Persian. Personal vocabulary lists, inflection tables for Greek, sentence diagrams, word-aligned
             translations and additional resources will be added in coming releases.
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-info">Install</button>
-                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Install</span>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="https://chrome.google.com/webstore/detail/alpheios-reading-tools/apkmkeppocbbebomnhdmhfenfifkhjfd">Chrome</a></li>
-                            <li><a href="https://addons.mozilla.org/en-US/firefox/addon/alpheios-reading-tools/">Firefox</a></li>
-                          </ul>
-                      </div>
         </p>
+        <%= partial(:installblock) =%>
         <h3>Prototypes</h3>
         <p class="lead">
             <a href="/pages/prototypes">Additional Prototypes and Resources Under Development.</a>
@@ -116,3 +106,4 @@
     </div>
   </div>
 </div>
+<%= javascript_include_tag 'browserDetect' %>

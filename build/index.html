@@ -103,18 +103,16 @@
                       <a href="https://chrome.google.com/webstore/detail/alpheios-reading-tools/apkmkeppocbbebomnhdmhfenfifkhjfd">Chrome</a>
                       and <a href="https://addons.mozilla.org/en-US/firefox/addon/alpheios-reading-tools/">Firefox</a>
                       browsers. Support for other browsers and mobile devices and additional functionality will be coming soon.
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-info">Install</button>
-                          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caret"></span>
-                            <span class="sr-only">Install</span>
-                          </button>
-                          <ul class="dropdown-menu">
-                            <li><a href="https://chrome.google.com/webstore/detail/alpheios-reading-tools/apkmkeppocbbebomnhdmhfenfifkhjfd">Chrome</a></li>
-                            <li><a href="https://addons.mozilla.org/en-US/firefox/addon/alpheios-reading-tools/">Firefox</a></li>
-                          </ul>
-                      </div>
                     </p>
+                    <p><a href="#" role="button" class="btn btn-info hidden" id="install-button">Install</a></p>
+<div id="install-info-unsupported" class="hidden">
+  <p>To try the tools with any text, please use a supported browser.</p>
+  <p><a href="https://www.google.com/chrome/">Download Chrome</a></p>
+  <p><a href="https://www.mozilla.org/ru/firefox/new/">Download Firefox</a></li></p>
+</div>
+<div id="install-info-unsupported-mobile" class="hidden">
+  <p>A mobile solution is currently under development. Please try the tools on the desktop.</p>
+</div>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <img class="img-responsive" src="img/v2/wordplusinflect-7ca133bc.png" alt="">
@@ -265,5 +263,6 @@
 </script>
 
   <script src="/js/bootstrap-770b4089.js"></script>
+  <script src="/js/browserDetect-40c7a11e.js"></script>
 </body>
 </html>
