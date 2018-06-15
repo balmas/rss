@@ -72,13 +72,9 @@
  	  info.classList.remove("hidden");
 	}
 
-	function showInstallInfoUnsupported(info) {
- 	  info.classList.remove("hidden");
-	}
-
 	function showInfoForMobile(link, info) {
 	  hideInstallLink(link);
-	  showInstallInfoUnsupportedMobile(info);
+	  showInstallInfoUnsupported(info);
 	}
 
 	function showInfoForSupportedBrowser(link, info) {
