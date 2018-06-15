@@ -12,6 +12,7 @@
 
 	var installButtonId = 'install-button';
 	var installInfoId = 'install-info-unsupported';
+	var installInfoMobileId = 'install-info-unsupported-mobile';
 
 	function detectFirefox() {
 	  return typeof InstallTrigger !== 'undefined';
@@ -25,13 +26,13 @@
 	    ///<summary>Detecting whether the browser is a mobile browser or desktop browser</summary>
 	    ///<returns>A boolean value indicating whether the browser is a mobile browser or not</returns>
 
-	    if (sessionStorage.desktop) // desktop storage 
+	    if (sessionStorage.desktop) // desktop storage
 	        return false;
 	    else if (localStorage.mobile) // mobile storage
 	        return true;
 
 	    // alternative
-	    var mobile = ['iphone','ipad','android','blackberry','nokia','opera mini','windows mobile','windows phone','iemobile']; 
+	    var mobile = ['iphone','ipad','android','blackberry','nokia','opera mini','windows mobile','windows phone','iemobile'];
 	    for (var i in mobile) if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
 
 	    // nothing found.. assume desktop
@@ -40,7 +41,7 @@
 
 	function updateInstallLink(link) {
 	  var defined = false
-	  var currentLink 
+	  var currentLink
 	  Object.keys(installLinks).forEach(function(browser){
 	    if (!defined && installLinks[browser].detectFn() === true) {
 	      currentLink = installLinks[browser].link;
@@ -71,8 +72,13 @@
  	  info.classList.remove("hidden");
 	}
 
-	function showInfoForMobile(link) {
+	function showInstallInfoUnsupported(info) {
+ 	  info.classList.remove("hidden");
+	}
+
+	function showInfoForMobile(link, info) {
 	  hideInstallLink(link);
+	  showInstallInfoUnsupportedMobile(info);
 	}
 
 	function showInfoForSupportedBrowser(link, info) {
@@ -92,7 +98,8 @@
 	  if (installLink === null) { return }
 
 	  if (detectMobile()) {
-	  	showInfoForMobile(installLink)
+	     installInfo = document.getElementById(installInfoMobileId);
+	  	 showInfoForMobile(installLink, installInfo)
 	  } else {
 	  	if (updateInstallLink(installLink)) {
 	  	  showInfoForSupportedBrowser(installLink, installInfo)
@@ -102,5 +109,3 @@
 	  }
 	})
 }());
-
-

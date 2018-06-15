@@ -253,7 +253,7 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url("/assets/bootstrap/glyphicons-halflings-regular-86b6f62b.eot");
-  src: url("/assets/bootstrap/glyphicons-halflings-regular-86b6f62b.eot?#iefix") format("embedded-opentype"), url("/assets/bootstrap/glyphicons-halflings-regular-ca35b697.woff2") format("woff2"), url("/assets/bootstrap/glyphicons-halflings-regular-278e49a8.woff") format("woff"), url("/assets/bootstrap/glyphicons-halflings-regular-44bc1850.ttf") format("truetype"), url("/assets/bootstrap/glyphicons-halflings-regular-4dcf0ab8.svg#glyphicons_halflingsregular") format("svg"); }
+  src: url("/assets/bootstrap/glyphicons-halflings-regular-86b6f62b.eot?#iefix") format("embedded-opentype"), url("/assets/bootstrap/glyphicons-halflings-regular-ca35b697.woff2") format("woff2"), url("/assets/bootstrap/glyphicons-halflings-regular-278e49a8.woff") format("woff"), url("/assets/bootstrap/glyphicons-halflings-regular-44bc1850.ttf") format("truetype"), url("/assets/bootstrap/glyphicons-halflings-regular-de51a849.svg#glyphicons_halflingsregular") format("svg"); }
 .glyphicon {
   position: relative;
   top: 1px;
