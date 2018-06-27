@@ -2,16 +2,14 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Alpheios Project</title>
   <link href="/css/bootstrap-6181707a.css" rel="stylesheet" />
-  <link href="/css/landing-page-771ceab2.css" rel="stylesheet" />
+  <link href="/css/landing-page-caa9d0f4.css" rel="stylesheet" />
   <link href="/img/alpheios_16.ico" rel="icon" type="image/ico" />
 
-  <!-- Custom CSS -->
-  <link href="css/landing-page-771ceab2.css" rel="stylesheet">
-
   <!-- Custom Fonts -->
-  <link href="font-awesome/css/font-awesome.min-710a0d50.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,19 +44,22 @@
           <a href="/pages/texts">Example Texts</a>
         </li>
         <li>
-          <a id="original_site" href="http://archive.alpheios.net">Original Site</a>
-        </li>
-        <li>
-          <a href="/pages/engagement">Engagement</a>
-        </li>
-        <li>
-          <a href="/pages/governance">Governance</a>
-        </li>
-        <li>
-          <a href="/pages/about">About</a>
+          <a href="/pages/comments">Comments</a>
         </li>
         <li>
           <a href="/pages/signup">Sign Up</a>
+        </li>
+        <li>
+          <a href="/pages/v1/links">Links</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/pages/about">Our Mission</a></li>
+            <li><a href="/pages/governance">Governance</a></li>
+            <li><a href="/pages/engagement">Engagement</a></li>
+            <li><a id="original_site" href="http://archive.alpheios.net">Original Site</a></li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -176,34 +177,32 @@
     <!-- /.content-section-a -->
 
 	<a  name="contact"></a>
-    <div class="banner">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Alpheios</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/Alpheios" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/alpheios-project" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="http://www.facebook.com/pages/The-Alpheios-Project/166255933415847" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
+  <div class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Alpheios</h2>
         </div>
-        <!-- /.container -->
-
+        <div class="col-lg-8">
+            <ul class="list-inline banner-social-buttons">
+                <li>
+                    <a href="https://twitter.com/Alpheios" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://github.com/alpheios-project" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                </li>
+                <li>
+                    <a href="http://www.facebook.com/pages/The-Alpheios-Project/166255933415847" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                </li>
+                <li>
+                    <a href="mailto:support@alpheios.net" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
+                </li>
+            </ul>
+        </div>
+      </div>
     </div>
-    <!-- /.banner -->
+  </div>
+  <!-- /.banner -->
 
   <!-- Footer -->
 <footer>
@@ -224,11 +223,19 @@
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="/pages/engagement">Engagement</a>
+                        <a href="/pages/comments">Comments</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="http://archive.alpheios.net">Original Site</a>
+                        <a href="/pages/signup">Signup</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/pages/links">Links</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="/pages/about">Mission</a>
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
@@ -236,12 +243,7 @@
                     </li>
                     <li class="footer-menu-divider">&sdot;</li>
                     <li>
-                        <a href="/pages/about">About</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                    <li>
-                        <a href="/pages/signup">Signup</a>
+                        <a href="/pages/engagement">Engagement</a>
                     </li>
                 </ul>
                 <p class="copyright text-muted small">Copyright &copy; The Alpheios Project, Ltd. 2017. All Rights Reserved</p>
