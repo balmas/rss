@@ -90,18 +90,25 @@
 	document.addEventListener('DOMContentLoaded', function(){
 	  var installLink = document.getElementById(installButtonId);
 	  var installInfo = document.getElementById(installInfoId);
+    var redirectMobile = document.getElementById('redirect-mobile')
 
-	  if (installLink === null) { return }
+	  if (installLink === null && redirectMobile === null) { return }
 
 	  if (detectMobile()) {
+      if (installLink) {
 	     installInfo = document.getElementById(installInfoMobileId);
 	  	 showInfoForMobile(installLink, installInfo)
+     } else {
+       document.location = redirectMobile.dataset.alpheiosMobileUrl
+     }
 	  } else {
-	  	if (updateInstallLink(installLink)) {
-	  	  showInfoForSupportedBrowser(installLink, installInfo)
-	  	} else {
-	  	  showInfoForUnSupportedBrowser(installLink, installInfo)
-	  	}
+      if (installLink) {
+	  	  if (updateInstallLink(installLink)) {
+	  	    showInfoForSupportedBrowser(installLink, installInfo)
+	  	  } else {
+	  	    showInfoForUnSupportedBrowser(installLink, installInfo)
+        }
+      }
 	  }
 	})
 }());
