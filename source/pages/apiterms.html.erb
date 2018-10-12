@@ -1,0 +1,127 @@
+<%= partial(:nav_tools) =%>
+<div class="intro-header">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Alpheios Tools</h2>
+        </div>
+    </div>
+  </div>
+</div>
+<a name="alpheios-environment"></a>
+<div class="content-section-a">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-12">
+        <h2>Alpheios Reading and Learning Environment</h2>
+        <h3>Browser Extensions Version 2 Alpha</h3>
+        <p class="lead">
+            Browser Extensions for <a href="https://chrome.google.com/webstore/detail/alpheios-reading-tools/apkmkeppocbbebomnhdmhfenfifkhjfd">Chrome</a>
+            and <a href="https://addons.mozilla.org/en-US/firefox/addon/alpheios-reading-tools/">Firefox</a>. The Alpheios Reading Tools
+            enhance any text you read in the browser by adding clickable access to dictionary entries, morphological analyses,
+            inflection tables and grammars for any Latin or Ancient Greek word. A subset of these resources are available for
+            Classical Arabic and Persian. Personal vocabulary lists and learning games will be added in coming releases. Comparable tools for the Safari
+            browser and mobile devices are coming soon.
+        </p>
+        <%= partial(:installblock) =%>
+        <p class="lead"><a href="/pages/v2/release-notes">Release Notes.</a></p>
+        <h3>Prototypes</h3>
+        <p class="lead">
+            <a href="/pages/prototypes">Additional Prototypes and Resources Under Development.</a>
+        </p>
+      </div>
+      <div class="col-lg-6 col-lg-offset-1 col-sm-12">
+        <img class="img-responsive" src="/img/v2/wordplusinflect.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<a name="alpheios-embedded"></a>
+<div class="content-section-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-12">
+        <h2>Alpheios Embedded Library</h2>
+        <p class="lead">
+          The <a href="https://github.com/alpheios-project/embed-lib/blob/master/README.md">Alpheios Embedded Javascript Library</a> can be
+          used by text providers to enable Alpheios functionality to be embedded directly in their pages without requiring users to install
+          the Alpheios browser extension to access it.<br/>
+        </p>
+      </div>
+      <div class="col-lg-6 col-lg-offset-1 col-sm-12">
+        <img class="img-responsive" src="/img/v2/embed.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<a name="alpheios-alignment-editor"></a>
+<div class="content-section-a">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-12">
+        <h2>Alpheios Translation Alignment Editor</h2>
+        <p class="lead">
+          The Alpheios Translation Alignment editor allows you to create word-by-word alignments between two texts.<br/>
+          <b><a href="/pages/v1/tutorials#use-alignment-editor">Tutorial</a></b>
+        </p>
+        <p><span class="alpheios-hint">No Login Required, data must be downloaded to be saved.</span></p>
+        <ul class="lead">
+          <li><b><a href="http://tools.alpheios.net/exist/rest/db/app/align-entersentence.xhtml">Online Interface</a></b> (English interface)</li>
+          <li><a href="http://tools.alpheios.net/exist/rest/db/app/align-entersentence_por.xhtml">Alternate Entry Point</a> (Portuguese interface provided by Anise Ferreira, Sao Paolo State University, Brazil)</li>
+        </ul>
+        <p><span class="alpheios-hint">Login required, user data and collaboration/editorial review options available. <b><a href="http://sites.tufts.edu/perseids/instructions/translation-alignment/">Instructions</a></b></span></p>
+        <ul class="lead">
+          <li>Via <a href="https://pca.perseids.org/apps/alignment?">Perseids</a> (Provided by Tufts University  - login and create account at <a href="https://sosol.perseids.org/sosol">https://sosol.perseids.org/sosol</a>)</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-lg-offset-1 col-sm-12">
+        <img class="img-responsive" src="/img/align.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<a name="alpheios-treebank-editor"></a>
+<div class="content-section-b">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-12">
+        <h2>Arethusa Treebank Editor</h2>
+        <p class="lead"><a href="https://www.perseids.org/tools/arethusa/app/#/">Arethusa</a> is an evolution of Alpheios treebank editor, developed with support from the
+          <a href="http://www.mellon.org/">Andrew W. Mellon Foundation</a>,
+          the <a href="http://imls.gov/">Institute of Museum and Library Services</a>
+          and the <a href="http://ec.europa.eu/esf/home.jsp">European Social Fund</a>.</span>
+          Arethusa supports customizable annotation formats, automatic morphological parsing, user data, and a variety of other features.<br/>
+          <b><a href="http://sites.tufts.edu/perseids/instructions/treebanking-instructions/">Instructions</a></b>
+        </p>
+        <p><span class="alpheios-hint">Login required, user data and collaboration/editorial review options available.</span></p>
+        <ul class="lead">
+          <li>Via <a href="https://pca.perseids.org/apps/treebank?">Perseids</a> (Provided by Tufts University  - login and create account at <a href="https://sosol.perseids.org/sosol">https://sosol.perseids.org/sosol</a>)</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-lg-offset-1 col-sm-12">
+        <img class="img-responsive" src="/img/treearethusa.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-section-a">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-sm-12">
+        <h2>Alpheios Treebank Editor</h2>
+        <p class="lead">
+          The original Alpheios Treebank editor allows you to create dependency trees of sentences or phrases.<br/>
+        </p>
+        <p><span class="alpheios-hint">No Login Required, data must be downloaded to be saved.</span></p>
+        <ul class="lead">
+          <li><b><a href="http://tools.alpheios.net/exist/rest/db/app/treebank-entertext.xhtml">Online Interface</a></b> (English interface)</li>
+          <li><a href="http://tools.alpheios.net/exist/rest/db/app/treebank-entertext_por.xhtml">Alternate Entry Point</a> (Portuguese interface provided by Anise Ferreira, Sao Paolo State University, Brazil)</li>
+        </ul>
+      </div>
+      <div class="col-lg-6 col-lg-offset-1 col-sm-12">
+        <img class="img-responsive" src="/img/treev1.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'browserDetect' %>
