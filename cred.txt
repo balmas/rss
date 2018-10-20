@@ -1,6 +1,0 @@
-Jino server
-
-URL		ovz1.irina-sklyarova0.1xdez.vps.myjino.ru
-Port	49244
-User	root
-Pass	uKC;8B(]nnc<KHRE

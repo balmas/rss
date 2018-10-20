@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Alpheios Project</title>
+  <title>red sun soundroom</title>
   <%= stylesheet_link_tag 'bootstrap' %>
   <%= stylesheet_link_tag 'landing-page' %>
-  <%= favicon_tag '/img/alpheios_16.ico' %>
+  <%= favicon_tag '/img/logo_16.ico' %>
 
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -21,8 +21,6 @@
 
 </head>
 <body>
-  <%= partial(:nav) =%>
-
     <!-- Header -->
     <a name="about"></a>
     <div class="intro-header">
@@ -31,7 +29,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h2>Alpheios builds evidence-based, open-source software to support worldwide study of classical languages and literatures.</h2>
+                        <h2></h2>
                     </div>
                 </div>
             </div>
@@ -50,16 +48,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Alpheios Reading Tools</h2>
-                    <p class="lead">The <a href="pages/tools">Alpheios Reading Tools</a> provide reading aids for any Latin or Ancient Greek
-                      text on the web, with experimental support for Classical Arabic and Persian. Our <a href="/pages/v2/release-notes">beta release</a>
-                      of Alpheios Version 2 is now available.</p>
-                    <%= partial(:installblock) =%>
+                    <img class="img-responsive" src="img/caldrons.jpeg" alt="">
+                    <p class="copyright text-muted small">Photo by <a href="https://www.instagram.com/stephenniemeier/">Stephen Niemeier from Pexels</a></p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/v2/wordplusinflect.png" alt="">
+                  <p class="lead">Something is cooking...</p>
                 </div>
             </div>
 
@@ -74,15 +67,12 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Our Goals</h2>
-                    <p class="lead">Our immediate goal is to make all of the functionality from the original Alpheios Version 1 Firefox extensions available in Version 2 for major browsers
-                      and on mobile devices, expanding at the same time to support more languages, including Persian, Syriac and Hebrew. Longer term our goals are manifold, from enhancing the reading experience to include audio and imagery as well as linguistic aids and games, to developing a deep, data-backed understanding of how and why people learn languages and what the effect is on the brain.</p>
+                <div class="col-lg-5 col-sm-6">
+                  <p class="lead">...salt is in the mix...</p>
                 </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/books-shelves-architecture-wood-442420.jpeg" alt="">
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/salt.jpeg" alt="">
+                    <p class="copyright text-muted small">Photo by <a href="https://www.instagram.com/stephenniemeier/">Stephen Niemeier from Pexels</a></p>
                 </div>
             </div>
 
@@ -98,14 +88,11 @@
 
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Participate</h2>
-                    <p class="lead"><a href="/pages/signup">Join our mailing list</a> to stay abreast of our developments and <a href="mailto:support@alpheios.net">email us</a> if you are interested in collaborating.</p>
-                    <%= partial(:donate) =%>
+                    <img class="img-responsive" src="img/sunsetoverhudsonriver.jpg" alt="">
+                    <p class="copyright text-muted small">Photo by Bridget Almas</a></p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/crowd.jpeg" alt="">
+                  <p class="lead">the sky is the limit.</p>
                 </div>
             </div>
 
@@ -115,28 +102,11 @@
     </div>
     <!-- /.content-section-a -->
 
-	<a  name="contact"></a>
   <div class="banner">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4">
-          <h2>Alpheios</h2>
-        </div>
-        <div class="col-lg-8">
-            <ul class="list-inline banner-social-buttons">
-                <li>
-                    <a href="https://twitter.com/Alpheios" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                </li>
-                <li>
-                    <a href="https://github.com/alpheios-project" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                </li>
-                <li>
-                    <a href="http://www.facebook.com/pages/The-Alpheios-Project/166255933415847" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                </li>
-                <li>
-                    <a href="mailto:support@alpheios.net" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
-                </li>
-            </ul>
+        <div class="text-center">
+            <img src="img/Soundroom_Logo_Full02.jpg" alt="">
         </div>
       </div>
     </div>
@@ -146,6 +116,5 @@
   <%= partial(:footer) =%>
 
   <%= javascript_include_tag 'bootstrap' %>
-  <%= javascript_include_tag 'browserDetect' %>
 </body>
 </html>
