@@ -15,4 +15,5 @@ configure :development do
 end
 configure :build do
   ignore "*.less"
+  set :http_prefix, '/newsite'
 end
