@@ -9,6 +9,7 @@ body,
 html {
     width: 100%;
     height: 100%;
+    background-color: #e5e5e6;
 }
 
 body,
@@ -32,7 +33,7 @@ h6 {
 }
 
 .lead {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     color: #4F0207;
 }
@@ -41,7 +42,7 @@ h6 {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
-    background: url(../img/console-mackie.jpg) no-repeat center center;
+    background: url(../img/Soundroom_website_landing_banner_02a.jpg) no-repeat center center;
     background-color: #000000;
 }
 
@@ -100,11 +101,12 @@ h6 {
 
 .content-section-a {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: #e5e5e6;
 }
 
 .content-section-b {
     padding: 50px 0;
+    background-color: #caccce;
 }
 
 .section-heading {
@@ -119,6 +121,7 @@ h6 {
 
 .banner {
     padding: 100px 0;
+    background-color: #ffffff;
 }
 
 .banner h2 {
